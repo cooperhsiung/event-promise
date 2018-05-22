@@ -1,9 +1,8 @@
 /**
  * Created by Cooper on 2018/05/22.
  */
-const Koa = require('koa');
-const app = new Koa();
-const player = require('./Player');
+const app = new (require('koa'))();
+const player = new (require('./Player'))();
 
 app.use(async ctx => {
   const txt = await player.onRes();

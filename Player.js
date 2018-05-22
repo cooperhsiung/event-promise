@@ -27,4 +27,4 @@ class Player extends EventEmitter {
   }
 }
 
-module.exports = new Player();
+module.exports = Player;

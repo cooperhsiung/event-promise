@@ -17,7 +17,7 @@ class Player extends EventEmitter {
   onRes() {
     return new Promise((resolve, reject) => {
       this.play();
-      setTimeout(reject, 5000, 'timeout');
+      setTimeout(reject, 5000, 'timeout'); //使用Promise时，超时reject是个好习惯
       this.on('data', data => {
         console.log('receive..');
         // this.removeAllListeners();
